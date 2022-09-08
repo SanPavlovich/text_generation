@@ -59,9 +59,12 @@ def model_train(words, window_size):
     return model
 
 import numpy as np
-file_name = 'C:/texts/war_and_piece.txt'
+file_name = input()
+#old_file_name = 'C:/texts/war_and_piece.txt'
 words = file_to_words(file_name, splitters, russian_letters)
 
 prefix_size = 2
 model = model_train(words, prefix_size)
-np.save('C:/texts/war_and_piece_model.npy', model)
+saved_file_name = input()
+#old_saved_name = 'C:/texts/war_and_piece_model.npy'
+np.save(saved_file_name, model)
