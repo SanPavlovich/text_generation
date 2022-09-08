@@ -63,8 +63,10 @@ def words_to_str(word_list):
 file_name = input()
 #old_file_name = 'C:/texts/war_and_piece_model.npy'
 model = np.load(file_name, allow_pickle=True).item()
-your_text = 'я каждый день'
-gen_text_len = 30
+your_text = input()
+gen_text_len = input()
+
+#этот параметр тоже можно сделать входным
 randomization = 20
 
 gen_text = model_predict(model, your_text, gen_text_len, randomization)
